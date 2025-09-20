@@ -5,6 +5,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData, fetchLatestInvoices, fetchRevenue } from '@/app/lib/data';
  
 export default async function Page() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   const revenue = await fetchRevenue();
   const latestInvoices = await fetchLatestInvoices();
   const {
